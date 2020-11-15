@@ -1,6 +1,10 @@
 # PyPackager
 
+## Installation
+	cd PyPackager/src
+	python setupy.py install
 
+## Usage
 	usage: pypackager [-h] -in INPUT_PATH [-out OUTPUT_PATH] [-n PACKAGE_NAME] [-r REQUIREMENTS_FILE] [-ep ENTRY_POINTS]
 
 
