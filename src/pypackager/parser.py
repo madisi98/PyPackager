@@ -42,6 +42,7 @@ def parse_script(input_path, script_dir, script_name, destiny):
                         relative_path = re.sub('^[./]+', '', relative_path)
                         relative_path = relative_path.split('/') + function_import
                         new_line = f'from {dots}{".".join(relative_path[:-1])} import {relative_path[-1]}'
+                        new_line += re.search(r' as \w+$', line) or ''
                         new_script.write(new_line)
                     else:
                         new_script.write(line)
