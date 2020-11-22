@@ -37,7 +37,7 @@ def launcher():
                 continue
             os.makedirs(os.path.join(output_curdir, subdir))
         for script in files:
-            parse_script(input_path, curdir, script, output_curdir)
+            parse_script(args, curdir, script, output_curdir)
         if '__init__.py' not in files:
             open(os.path.join(output_curdir, '__init__.py'), 'w')
 
